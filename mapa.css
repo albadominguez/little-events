@@ -1,46 +1,35 @@
-.mapaizda { background-color: #a9bfda; }
-.mapadcha { background-color: #a9bfda; }
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
 
-h2 {
-	font-family: Lato;
-	color: white;
+*,
+*:after,
+*:before { 
+ padding: 0;
+ margin: 0;
+ box-sizing: inherit;
+}
+
+.grid {
+  min-height: 100vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.grid > * { 
+  padding: 2rem;
+  text-align: justify;
+  background-color: #a9bfda;
+
 }
 
 .textomap{
 	font-family: Lato;
 	color: white;
-	line-height: 120%;
+	line-height: 150%;
 	font-size: 14px;
 }
-
-.mapa {
-  display: grid;
-  /* Grid de 3x2 */
-  /* 3 columnas: 2a como margen (50px)*/
-  grid-template-columns: 1fr 50px 1fr;
-  /* 2 filas: grid-rows: 1a 25px, 2a ancho automático */
-  grid-template-rows: 25px auto;
-  margin-top:80px;
-  margin-bottom:60px;
-  
-}
-.textoMapa{
-  grid-column: 1;
-  grid-row: 1;
-  padding-top: 25px ;
-}
-
-.mapaizda {
-  grid-column: 1;
-  grid-row: 2;
-  margin-left:50px;
-  padding: 60px 10px 50px 10px; 
-}
-
-.mapadcha {
-  grid-column: 3;
-  grid-row: 2;
-  margin-right:50px;
-  padding: 40px 30px 50px 30px;
-}
-
