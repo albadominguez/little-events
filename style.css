@@ -1,0 +1,68 @@
+#divTextHeader {
+  background-image: url("../imagenes/portada.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  height: 100%;
+  width: 100%;
+}
+#divTextHeader .divTitle h1{
+  position: relative;
+  top: 250px;
+  width: 600px;
+  margin: 0 auto;
+
+}
+h1{
+    font-family:'lato';
+    font-weight:bold;
+    font-size:56px;
+    color:white;
+    text-align:center;
+}
+#divTextHeader .divSubtitle h2{
+  position: relative;
+  top: 270px;
+  width: 1000px;
+  margin: 0 auto;
+}
+h2{
+    font-family:'lato';
+    font-weight:bold;
+    font-size:22px;
+    color:white;
+    text-align:center;
+
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+li {
+    float: left;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+#section4 .sponsors img{
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.sponsors h2{
+    font-family:lato;
+    font-size:22px;
+    color:lightgrey;
+    text-align:center;
+}
