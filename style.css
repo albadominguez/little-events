@@ -4,11 +4,12 @@
   background-position: bottom center;
   height: 650px;
   width: 100%;
+  z-index=1;
 }
-#divTextHeader .divTitle h1{
+#divTitle h1{
   position: relative;
-  top: 250px;
-  width: 600px;
+  top: 230px;
+  width: 800px;
   margin: 0 auto;
 
 }
@@ -19,9 +20,9 @@ h1{
     color:white;
     text-align:center;
 }
-#divTextHeader .divSubtitle h2{
+#divSubtitle h2{
   position: relative;
-  top: 270px;
+  top: 240px;
   width: 1000px;
   margin: 0 auto;
 }
@@ -34,7 +35,7 @@ h2{
 
 }
 
-ul{
+#divNav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,7 +48,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: skyblue;
     text-align: center;
     padding: 0px 16px;
     text-decoration: none;
