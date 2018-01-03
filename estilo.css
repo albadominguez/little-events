@@ -1,0 +1,94 @@
+
+@media all and (min-width: 600px){
+
+/*estilos para section2*/
+    
+	.llegar{
+		width: 100%;
+		margin: auto;
+		background-color: #497dbd;
+	}
+	
+	#titulomapa{
+		font-family: Lato;
+		color: white;
+		font-weight: bold;
+		font-size: 24px;
+		text-align: center;
+		padding: 25px 0px 25px 0px;		
+	}
+	
+		
+	.mapa{   	
+		width: 50%;
+		height:400px;
+		background-color: #497dbd;
+		float:left; 
+		padding: 25px 0px 50px 50px;     
+	}
+	
+
+	.textoLlegar{
+		width: 50%;
+		height:400px;
+		background-color: #497dbd;
+		font-family: Lato;
+		color: white;
+		font-size: 16px;
+		margin-left:auto; 
+		padding: 25px 0px 50px 0px;	
+	}
+
+/*estilos para footer*/	
+	
+	.footer{
+		width: 100%;
+		margin: auto;
+
+	}
+	
+	.pfooter{  /*estilo texto: "contacta con nosotros* del footer*/
+		padding: 0px 0px 0px 30px;
+		line-height: 0.1;
+		color: white;
+		font-family: Lato;
+		font-size: 18px;
+		margin-left: 15px;
+	}
+	
+	.contacto{ /*div de la izquierda, el que contiene los iconos de RRSS*/
+		width: 50%;
+		float:left;
+		background-color: #497dbd;
+		height:120px;		
+	}
+	.contacto2{ /*div de la derecha, el que contiene el texto 48 h...*/
+		width: 50%;
+		float:right;
+		background-color: #497dbd;
+		height:120px;
+	}
+	
+	.contacto>span { /*para que salgan los iconos de las RRSS en una línea*/
+		display:inline-block;
+	}
+	.textoContacto{ /*estilo del texto de rrss*/
+		font-family: Lato;
+		color: white;
+		font-size: 12px;
+		margin-left: 15px;
+		margin-right: 5px;
+		padding: 0px 5px 0px 30px; 		
+	}
+	
+	#textoContacto2{ /*estilo texto: "48 horas de deporte solidario del footer*/
+		font-family: Lato;
+		color: white;
+		font-size: 24px;
+		text-align: right;
+		padding: 25px 80px 15px 5px; 
+	}
+	
+
+
+

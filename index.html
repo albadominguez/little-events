@@ -5,7 +5,7 @@
 	<meta charset="utf-8" />
 	<meta name="description" content="48 horas deporte solidario" />
 	<title>48 horas deporte solitario</title>
-	<link rel="stylesheet" type="text/css" href="" />
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
 </head>
 <body>
 <header>
@@ -94,13 +94,14 @@
 			</table>
 		</div>
 	</section>
+	
 	<section id="section2">
-		<div class="llegar">
-			<h2>Cómo llegar</h2>
-		<div class="mapa">
+	<div class="llegar">
+		<div id="titulomapa">Cómo llegar</div>
+		<div class="mapa">		
 		<iframe style="border:2px solid white;" src="https://www.google.com/maps/d/u/0/embed?mid=1JidzQJZ8L108PGO0rK8M58oPfC74aD9X" width="554" height="363"></iframe>      
 		</div>
-		<div class="textoLlegar">
+		<div class="textoLlegar" >
 			<h3>Bus:</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id rutrum enim.</p>
 			<p>Departing at Lorem ipsum Friday 9.30 am to 12 pm </br> Saturday and Sunday 10 am to 12 pm Every 30 min</p>
@@ -109,7 +110,9 @@
 			<p>Departing at Lorem ipsum Friday 9.30 am to 12 pm </br> Saturday and Sunday 10 am to 12 pm Every 30 min</p>
 		</div>
 	</div>
-</section>
+	
+	</section>
+	
 <section id="section3">
 	<div class="nosotros">
 		<h2>Sobre nosotros</h2>
@@ -138,24 +141,39 @@
 </section>
 	</main>
 </body>
+
+
 <footer>
-	<div id="contacto">
+<div class="footer">
+	<div class="contacto">
+		<p class="pfooter">
+		Contacta con nosotros
+		</p>
 		<span id="spanEmail" onclick="window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@deportesolidario.com', '_blank').focus();">
+		<p class="textoContacto">
 			<img alt="email" src="images/mail.png">
-			<p class="textoContacto">Email</p>
+			Email</p>
 		</span>
 		<span id="spanFacebook" onclick="window.open('https://www.facebook.com', '_blank').focus();">
+			<p class="textoContacto">
 			<img alt="facebook" src="images/facebook.png">
-			<p class="textoContacto">Facebook</p>
+			Facebook</p>
 		</span>
 		<span id="spanInstagram" onclick="window.open('https://www.instagram.com/wetalkbcn/', '_blank').focus();">
+			<p class="textoContacto">
 			<img alt="instagram" src="images/instagram.png">
-			<p class="textoContacto">Instagram</p>
+			Instagram</p>
 		</span>
 		<span id="spanTwitter" onclick="window.open('https://twitter.com', '_blank').focus();">
+			<p class="textoContacto">
 			<img alt="twitter" src="images/twitter.png">
-			<p class="textoContacto">Twitter</p>
-		</span>	
+			Twitter</p>
+		</span>
 	</div>
+	<div class="contacto2">
+		<p id="textoContacto2"> 48 h. deporte solidario <p>	
+	</div>
+</div>
 </footer>
+
 </html>
