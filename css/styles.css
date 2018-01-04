@@ -1,0 +1,285 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+header {
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/portada.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	color: white;
+}
+/* MENU Y CABECERA */
+header {
+	text-align: center;
+	position: relative;
+}
+.menuContainer {
+}
+	.menu {
+		display: inline-block;
+		margin-top: 40px;
+	}
+		.menuItems {
+			display: flex;
+			flex-direction: row;
+			list-style: none;
+
+		}
+			.menuItems li {
+				margin-right: 40px;
+			}
+			.menuItems li:last-child {
+				margin-right: 0;
+			}
+			.menuItems a {
+				text-decoration: none;
+				flex-grow: 1;
+				color: white;
+			}
+.titleHeader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+	.divTitle h1 {
+		font-size: 3.25rem;
+	}
+	.divSubtitle h2{
+		font-size: 1.375rem;
+	}
+
+/* PROGRAMACION */
+.sectionProg {
+	background-color: #F8F8F8;
+	padding: 50px 0 80px 0;
+}
+.divProg{
+	width: 95%;
+	margin: auto;
+}
+	.tableProg {
+		display: table;
+		width: 100%;
+		border: 1px solid #3576BC;
+	}
+		.progContainer {
+			background-color: #EBEBEB;
+			display: table-cell;
+			width: 28%;
+			border-left: 1px solid #3576BC;
+			padding-bottom: 30px;
+		}
+		.progContainer:first-of-type {
+			width: 16%;
+			background-color: #3576BC;
+			border-left: none;
+		}
+		.progContainer > div {
+			width: 90%;
+			text-align: center;
+			margin: auto;
+		}
+			.divHours {
+				color: #F8F8F8;
+				width: 70%;
+				margin: auto;
+				text-align: left;
+			}
+				.divHours div {
+					margin-bottom: 5px;
+				}
+				.divHours div:first-child {
+					font-family: "Lato Bold";
+				}
+			.columnTitle {
+				border-bottom: 1px solid #3576BC;
+				font-family: "Lato Bold";
+				font-size: 1.375rem;
+				text-align: center;
+				color: #3E3E3E;
+				line-height: 2rem;
+				margin-bottom: 15px !important;
+			}
+			.infoProg > div{
+				display: inline-block;
+				font-size: 1rem;
+				color: #AAA59E;
+				margin: 0 27px 15px 0;
+			}
+			.infoProg > div:last-child {
+				font-family: "Lato Bold";
+				color: #3E3E3E;
+				margin-right: 0px;
+			}
+
+/* COMO LLEGAR*/
+.sectionCL {
+	background-color: #3576BC;
+	padding: 50px 0 50px 0;
+}
+	.dirContainer {
+		width: 95%;
+		margin: auto;
+	}
+		.dirContainer > div {
+			display: inline-block;
+			float: left;
+			width: 47.5%;
+			margin-right: 5%;
+		}
+		.dirContainer > div:last-child {
+			margin-right: 0;
+		}
+			#googleMap {
+				border: 6px solid #FFFFFF;
+			}
+			.dirContainer .divHours {
+				font-size: 1.250rem;
+				width: 90%;
+				margin-bottom: 50px;
+			}
+				.dirContainer .divHours div {
+					font-family: "Lato Bold";
+					margin-bottom: 5px;
+				}
+				.dirContainer .divHours p {
+					line-height: 1.250rem;
+					margin-bottom: 30px;
+				}
+
+/* SPONSORS*/
+.divSponsors {
+	width: 95%;
+	margin: auto;
+}
+
+/* FOOTER */	
+	
+	.footer{
+		width: 100%;
+		margin: auto;
+		color: white;
+		height:120px;
+		background-color: #497dbd;
+	}
+	
+	.pfooter{  /*estilo texto: "contacta con nosotros* del footer*/
+		font-size: 1.2em;
+		margin: 0 0 5px 50px;
+	}
+
+	.divContact {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.contacto{ /*div de la izquierda, el que contiene los iconos de RRSS*/
+		float:left;		
+	}
+	.contacto2{ /*div de la derecha, el que contiene el texto 48 h...*/
+		float:right;
+	}
+
+	.contacto, .contacto2 {
+		position: relative;
+		width: 50%;
+		height: 100%;
+	}
+
+	.textoContacto { /*estilo del texto de rrss*/
+		color: white;
+		font-size: 0.8rem;
+		margin-left: 20px;
+		text-decoration: none;
+	}
+
+	.textoContacto:first-of-type {
+		margin-left: 50px;
+	}
+
+	.textoContacto img {
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	
+	#textoContacto2{ /*estilo texto: "48 horas de deporte solidario del footer*/
+		font-size: 1.5rem;
+		text-align: right;
+		padding: 0 80px 0px 5px; 
+	}
+
+/* AUXILIAR */
+.sectionTitle, .sectionTitleW {
+	font-size: 1.875rem;
+	color: #3E3E3E;
+	text-align: center;
+	padding: 0px 0 50px 0;
+}
+.sectionTitleW {
+	color: #F8F8F8;
+}
+.arrow {
+	position: absolute;
+	bottom: 50px;
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	border: 1px solid white;
+	border-top: none;
+	border-left: none;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+.arrow:hover {
+	border: 2px solid white;
+	border-top: none;
+	border-left: none;
+}
+.clear {
+	clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+	.menuItems, .progContainer, .progContainer:first-of-type, .dirContainer > div {
+		display: block;
+		width: 100%;
+	}
+	.menuItems li {
+		margin: 0 0 10px 0;
+		padding: 2px;
+		border: 1px solid #FFF;
+	}
+		.menuItems li:hover {
+			border: 1px solid transparent;
+			transition: border 1s;
+		}
+	.dirContainer > div {
+		margin-bottom: 20px;
+	}
+	.divHours {
+		text-align: center;		
+	}
+	.divTitle h1 {
+		font-size: 1.8rem;
+	}
+	.divSubtitle h2{
+		font-size: 0.8rem;
+	}
+	.titleHeader {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-20%);
+	}
+}
