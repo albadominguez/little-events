@@ -1,58 +1,57 @@
-#divTextHeader {
+#divTextHeader { /*imagen de portada*/
   background-image: url("images/portada.jpg");
   background-size: cover;
   background-position: bottom center;
   height: 650px;
   width: 100%;
-  z-index=1;
+  
 }
-#divTitle h1{
+#divTitle h1{ /* titulo*/
   position: relative;
   top: 230px;
   width: 800px;
   margin: 0 auto;
 
-}
-h1{
     font-family:'lato';
     font-weight:bold;
     font-size:56px;
     color:white;
     text-align:center;
 }
-#divSubtitle h2{
+
+#divSubtitle h2{ /*subtitulo*/
   position: relative;
   top: 240px;
   width: 1000px;
   margin: 0 auto;
-}
-h2{
-    font-family:'lato';
-    font-weight:bold;
-    font-size:22px;
-    color:white;
-    text-align:center;
-
+  font-family:'lato';
+  font-weight:bold;
+  font-size:22px;
+  color:white;
+  text-align:center;
 }
 
-#divNav ul{
+
+ 
+
+#divNav ul{ /*menú navegación*/
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-li {
-    float: left;
-}
+
 
 
 li a {
+    float: left;
     display: block;
     color: skyblue;
     text-align: center;
     padding: 0px 16px;
     text-decoration: none;
 }
+
 
 
 #section4 .sponsors img{
