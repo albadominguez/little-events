@@ -52,10 +52,10 @@ header {
 	transform: translate(-50%,-50%);
 }
 	.divTitle h1 {
-		font-size: 3.250em;
+		font-size: 3.25rem;
 	}
 	.divSubtitle h2{
-		font-size: 1.375em;
+		font-size: 1.375rem;
 	}
 
 /* PROGRAMACION */
@@ -104,15 +104,15 @@ header {
 			.columnTitle {
 				border-bottom: 1px solid #3576BC;
 				font-family: "Lato Bold";
-				font-size: 1.375em;
+				font-size: 1.375rem;
 				text-align: center;
 				color: #3E3E3E;
-				line-height: 2em;
+				line-height: 2rem;
 				margin-bottom: 15px !important;
 			}
 			.infoProg > div{
 				display: inline-block;
-				font-size: 1em;
+				font-size: 1rem;
 				color: #AAA59E;
 				margin: 0 27px 15px 0;
 			}
@@ -144,7 +144,7 @@ header {
 				border: 6px solid #FFFFFF;
 			}
 			.dirContainer .divHours {
-				font-size: 1.250em;
+				font-size: 1.250rem;
 				width: 90%;
 				margin-bottom: 50px;
 			}
@@ -153,13 +153,76 @@ header {
 					margin-bottom: 5px;
 				}
 				.dirContainer .divHours p {
-					line-height: 1.250em;
+					line-height: 1.250rem;
 					margin-bottom: 30px;
 				}
 
+/* SPONSORS*/
+.divSponsors {
+	width: 95%;
+	margin: auto;
+}
+
+/* FOOTER */	
+	
+	.footer{
+		width: 100%;
+		margin: auto;
+		color: white;
+		height:120px;
+		background-color: #497dbd;
+	}
+	
+	.pfooter{  /*estilo texto: "contacta con nosotros* del footer*/
+		font-size: 1.2em;
+		margin: 0 0 5px 50px;
+	}
+
+	.divContact {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	
+	.contacto{ /*div de la izquierda, el que contiene los iconos de RRSS*/
+		float:left;		
+	}
+	.contacto2{ /*div de la derecha, el que contiene el texto 48 h...*/
+		float:right;
+	}
+
+	.contacto, .contacto2 {
+		position: relative;
+		width: 50%;
+		height: 100%;
+	}
+
+	.textoContacto { /*estilo del texto de rrss*/
+		color: white;
+		font-size: 0.8rem;
+		margin-left: 20px;
+		text-decoration: none;
+	}
+
+	.textoContacto:first-of-type {
+		margin-left: 50px;
+	}
+
+	.textoContacto img {
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	
+	#textoContacto2{ /*estilo texto: "48 horas de deporte solidario del footer*/
+		font-size: 1.5rem;
+		text-align: right;
+		padding: 0 50px 0px 5px; 
+	}
+
 /* AUXILIAR */
 .sectionTitle, .sectionTitleW {
-	font-size: 1.875em;
+	font-size: 1.875rem;
 	color: #3E3E3E;
 	text-align: center;
 	padding: 0px 0 50px 0;
@@ -186,4 +249,37 @@ header {
 }
 .clear {
 	clear: both;
+}
+
+@media only screen and (max-width: 768px) {
+	.menuItems, .progContainer, .progContainer:first-of-type, .dirContainer > div {
+		display: block;
+		width: 100%;
+	}
+	.menuItems li {
+		margin: 0 0 10px 0;
+		padding: 2px;
+		border: 1px solid #FFF;
+	}
+		.menuItems li:hover {
+			border: 1px solid transparent;
+			transition: border 1s;
+		}
+	.dirContainer > div {
+		margin-bottom: 20px;
+	}
+	.divHours {
+		text-align: center;		
+	}
+	.divTitle h1 {
+		font-size: 1.8rem;
+	}
+	.divSubtitle h2{
+		font-size: 0.8rem;
+	}
+	.titleHeader {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-20%);
+	}
 }
