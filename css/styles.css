@@ -59,7 +59,7 @@ header {
 	}
 
 /* PROGRAMACION */
-.sectionProg {
+.sectionWhite {
 	background-color: #F8F8F8;
 	padding: 50px 0 80px 0;
 }
@@ -163,6 +163,32 @@ header {
 	margin: auto;
 }
 
+/* SOBRE NOSOTROS */
+.le-text {
+	font-family: "Lato Light";
+	font-size: 1.125rem;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.equipos {
+	display: inline-block;
+	width: 33%;
+	text-align: center; 
+}
+	.equipos img {
+		border: 2px solid #3576BC;
+	}
+	.equipos p {
+		width: 300px;
+		margin: auto;
+	}
+
+	.equipos h3 {
+		color: #3576BC;
+		margin: 20px 0 14px 0;
+	}
+
 /* FOOTER */	
 	
 	.footer{
@@ -251,6 +277,7 @@ header {
 	clear: both;
 }
 
+/* CSS - DISPOSITIVOS MÓVILES */
 @media only screen and (max-width: 768px) {
 	.menuItems, .progContainer, .progContainer:first-of-type, .dirContainer > div {
 		display: block;
@@ -281,5 +308,10 @@ header {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-20%);
+	}
+	.equipos {
+		display: block;
+		width: 100%;
+		margin-bottom: 25px;
 	}
 }
