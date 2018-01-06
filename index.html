@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="48 horas deporte solidario" />
 	<title>Little Events - 48 Horas de deporte solidario</title>
 	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
@@ -12,7 +13,7 @@
 <!-- __________________ CABECERA __________________ -->
 
 <header>
-	<div class="menuContainer">
+	<div id="menuContainer" class="menuContainer">
 		<nav class="menu">
 			<ul class="menuItems">
 				<li><a id="nav1" href="#-programacion" onclick="scrollSmooth('#programacion')">Programación</a></li>
@@ -171,7 +172,7 @@
 
 <!-- __________________ SOBRE NOSOTROS __________________ -->
 
-	<section id="aboutUs" class="sectionWhite" style="background-color: #fff; padding-top: 0">
+	<section id="aboutUs" class="sectionWhite" style="background-color: #fff; padding-top: 0; padding-bottom: 0">
 		<div class="divProg">
 			<h2 class="sectionTitle">Sobre nosotros</h2>
 			<p class="le-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum tincidunt consectetur. Nam eleifend, velit vel malesuada porta, mauris mauris sagittis sem, tincidunt luctus metus velit non nunc. Vivamus id purus lacus. Aliquam non condimentum justo, eu finibus enim. In risus tellus, porta id libero vitae, pharetra ultrices est. Morbi eget mi nibh. Suspendisse rhoncus, nisl in efficitur lacinia, arcu.</p>
@@ -195,8 +196,9 @@
 			</div>
 		</div>
 		
-		
-		
+		<div style="height: 30px; text-align: center; position: relative; margin: 25px 0 25px 0;">&nbsp;
+			<div class="arrow" onclick="scrollSmooth('#menuContainer')" style="border-color: black; bottom: 0; transform: rotate(225deg)"></div>
+		</div>
 	</section>
 </main>
 

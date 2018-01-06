@@ -12,7 +12,7 @@
 				  VALUES ('$name', '$mail', 1);";
 
 		// Establecer conexion con BD
-		$conexion = mysqli_connect('localhost','root','','little_events');
+		$conexion = mysqli_connect('localhost','n260m_21110730','le123456','n260m_21110730_little_events');
 		
 		// Enviar la query
 		$resultado = mysqli_query($conexion, $query);

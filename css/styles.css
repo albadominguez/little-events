@@ -374,12 +374,22 @@ header {
 		padding: 2px;
 		border: 1px solid #FFF;
 	}
-		.menuItems li:hover {
-			border: 1px solid transparent;
-			transition: border 1s;
+
+	/* MAPA */
+	.dirContainer {
+		width: 80%;
+	}
+		.dirContainer > div {
+			margin-bottom: 20px;
 		}
-	.dirContainer > div {
-		margin-bottom: 20px;
+		#googleMap {
+			height: 150px !important;
+		}
+
+	/* PROGRAMACION */
+	.progContainer {
+		border-left: none;
+		border-right: 1px solid #3576BC;
 	}
 	.divHours {
 		text-align: center;		
@@ -399,5 +409,30 @@ header {
 		display: block;
 		width: 100%;
 		margin-bottom: 25px;
+	}
+
+	/* FOOTER */
+	.footer > div {
+		position: static;
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+		.divContact {
+			position: static;
+			transform: none;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+			.textoContacto:first-of-type {
+				margin: 0;
+			}
+
+	/* NEWSLETTER*/
+	.nl-form {
+		width: 90%;
+	}
+	.btn-nl {
+		opacity: 1;
 	}
 }
