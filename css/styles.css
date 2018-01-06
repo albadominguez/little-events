@@ -162,6 +162,9 @@ header {
 	width: 95%;
 	margin: auto;
 }
+	.divSponsors img {
+		width: 100%;
+	}
 
 /* SOBRE NOSOTROS */
 .le-text {
