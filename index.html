@@ -15,10 +15,10 @@
 	<div class="menuContainer">
 		<nav class="menu">
 			<ul class="menuItems">
-				<li><a id="nav1" href="#programacion">Programación</a></li>
-				<li><a id="nav2" href="#sectionCL">Cómo llegar</a></li>
-				<li><a id="nav2" href="#">Sobre nosotros</a></li>
-				<li><a id="nav3" href="#">Contacto</a></li>
+				<li><a id="nav1" href="#-programacion" onclick="scrollSmooth('#programacion')">Programación</a></li>
+				<li><a id="nav2" href="#-sectionCL" onclick="scrollSmooth('#sectionCL')">Cómo llegar</a></li>
+				<li><a id="nav3" href="#-sponsors" onclick="scrollSmooth('#sponsors')">Sponsors</a></li>
+				<li><a id="nav2" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -30,13 +30,13 @@
 			<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis lectus</h2>
 		</div>
 	</div>
-	<a href="#programacion"><div class="arrow"></div></a>
+	<div class="arrow" onclick="scrollSmooth('#programacion')"></div>
 </header>
 <main>
 
 <!-- __________________ PROGRAMACIÓN __________________ -->
 
-	<section class="sectionProg" id="programacion">
+	<section class="sectionWhite" id="programacion">
 		<div class="divProg">
 			<h2 class="sectionTitle">Programación</h2>
 			<div class="tableProg">
@@ -160,7 +160,7 @@
 
 <!-- __________________ SPONSORS __________________ -->
 
-	<section class="sectionProg" style="background-color: #fff; padding-bottom: 50px">
+	<section id="sponsors" class="sectionWhite" style="background-color: #fff; padding-bottom: 50px">
 		<div class="divProg">
 			<h2 class="sectionTitle">Sponsors</h2>
 			<div class="divSponsors">
@@ -171,28 +171,50 @@
 
 <!-- __________________ SOBRE NOSOTROS __________________ -->
 
-	<section class="sectionProg" style="background-color: #fff; padding-top: 0">
+	<section id="aboutUs" class="sectionWhite" style="background-color: #fff; padding-top: 0">
 		<div class="divProg">
 			<h2 class="sectionTitle">Sobre nosotros</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum tincidunt consectetur. Nam eleifend, velit vel malesuada porta, mauris mauris sagittis sem, tincidunt luctus metus velit non nunc. Vivamus id purus lacus. Aliquam non condimentum justo, eu finibus enim. In risus tellus, porta id libero vitae, pharetra ultrices est. Morbi eget mi nibh. Suspendisse rhoncus, nisl in efficitur lacinia, arcu </hr> Quisque at vehicula velit, ut gravida augue. Vestibulum blandit accumsan viverra. Mauris laoreet bibendum aliquam. Suspendisse et metus ultrices, facilisis lorem quis, ullamcorper odio. Vestibulum ultricies nec massa vel euismod. Pellentesque laoreet congue eros, sit amet condimentum sapien tempor sit amet. Aenean vitae gravida nulla. Aenean sed odio quis mi consequat tempus eu at tortor. </p>
+			<p class="le-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum tincidunt consectetur. Nam eleifend, velit vel malesuada porta, mauris mauris sagittis sem, tincidunt luctus metus velit non nunc. Vivamus id purus lacus. Aliquam non condimentum justo, eu finibus enim. In risus tellus, porta id libero vitae, pharetra ultrices est. Morbi eget mi nibh. Suspendisse rhoncus, nisl in efficitur lacinia, arcu.</p>
+			<p class="le-text"> Quisque at vehicula velit, ut gravida augue. Vestibulum blandit accumsan viverra. Mauris laoreet bibendum aliquam. Suspendisse et metus ultrices, facilisis lorem quis, ullamcorper odio. Vestibulum ultricies nec massa vel euismod. Pellentesque laoreet congue eros, sit amet condimentum sapien tempor sit amet. Aenean vitae gravida nulla. Aenean sed odio quis mi consequat tempus eu at tortor. </p>
 		</div>
-		<div class="equipo1">
-			<img src="img/equipo1.jpg">
-			<h3>Lorem ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
+		<div class="divProg">
+			<div class="equipos">
+				<img src="img/equipo1.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125px">
+				<h3>Lorem ipsum</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
+			</div>
+			<div class="equipos">
+				<img src="img/equipo2.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125px">
+				<h3>Lorem ipsum</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
+			</div>
+			<div class="equipos">
+				<img src="img/equipo3.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125px">
+				<h3>Lorem ipsum</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
+			</div>
 		</div>
-		<div class="equipo2">
-			<img src="img/equipo2.jpg">
-			<h3>Lorem ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
-		</div>
-		<div class="equipo3">
-			<img src="img/equipo3.jpg">
-			<h3>Lorem ipsum</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
-		</div>
+		
+		
+		
 	</section>
 </main>
+
+<!-- __________________ NEWSLETTER __________________ -->
+
+<button id="btn-nl" class="btn-nl" onclick="showNewsletter('show')">
+	SUSCRIBETE
+</button>
+
+<div class="nl-cont" id="nl-cont">
+	<form class="nl-form" action="suscripcion.php" method="post">
+		<h2>Suscribete al newsletter</h2>
+		<input type="text" name="name" placeholder="Nombre y Apellidos" required>
+		<input type="email" name="email" placeholder="Email" required>
+		<button type="submit">Suscribir</button>
+		<button type="button" onclick="showNewsletter('hide')">Cancelar</button>
+	</form>
+</div>
 
 <!-- __________________ FOOTER __________________ -->
 
@@ -235,19 +257,7 @@
 
 <!-- __________________ SCRIPTS __________________ -->
 
-<script>
-    // Función para generar el mapa
-	function miMapa() {
-		var direccion = new google.maps.LatLng(41.399238, 2.170086);
-		var mapaDiv = 	document.getElementById("googleMap");
-		var mapaProp = {center: direccion, zoom:15};
-		var mapa = new google.maps.Map(mapaDiv, mapaProp);
-		var marcador = new google.maps.Marker({position: direccion});
-		marcador.setMap(mapa);
-	}
-	// Igualar altura de contenedores
-	$(".who").height($(".where").height());
-</script>
+<script src="js/funciones.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH0J-YqEdHvPi1X_tqmyb1W4hKIrKta6I&callback=miMapa"></script>
 </body>
 </html>

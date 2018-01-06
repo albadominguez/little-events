@@ -59,7 +59,7 @@ header {
 	}
 
 /* PROGRAMACION */
-.sectionProg {
+.sectionWhite {
 	background-color: #F8F8F8;
 	padding: 50px 0 80px 0;
 }
@@ -163,6 +163,32 @@ header {
 	margin: auto;
 }
 
+/* SOBRE NOSOTROS */
+.le-text {
+	font-family: "Lato Light";
+	font-size: 1.125rem;
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.equipos {
+	display: inline-block;
+	width: 33%;
+	text-align: center; 
+}
+	.equipos img {
+		border: 2px solid #3576BC;
+	}
+	.equipos p {
+		width: 300px;
+		margin: auto;
+	}
+
+	.equipos h3 {
+		color: #3576BC;
+		margin: 20px 0 14px 0;
+	}
+
 /* FOOTER */	
 	
 	.footer{
@@ -251,6 +277,75 @@ header {
 	clear: both;
 }
 
+/* NEWSLETTER */
+.btn-nl {
+	position: fixed;
+	bottom: 40px;
+	right: 25px;
+	padding: 10px;
+	color: #fff;
+	background-color: transparent;
+	opacity: 0.6;	
+	border: 1px solid #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+}
+	.btn-nl:hover {
+		opacity: 1;
+		transition: opacity 1s;
+	}
+
+.nl-cont {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0);
+	z-index: -1;
+}
+
+.nl-form {
+	display: inline-block;
+	width: 25%;
+	height: 30%;
+	background-color: #fff;
+	padding: 40px 15px 40px 15px;
+	box-shadow: 0px 0px 20px 5px black;
+
+	/*Centrar el formulario*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+	.nl-form h2 {
+		margin-bottom: 20px;
+	}
+	.nl-form input {
+		display: block;
+		font-size: 1.2em;
+		color: #3E3E3E;
+		width: 100%;
+		height: 40px;
+		margin-bottom: 15px;
+		border: 1px solid #3576BC;
+	}
+	.nl-form button {
+		color: #fff;
+		background-color: #3576BC;
+		padding: 10px;
+		margin: 20px 5px 0 0;	
+		border: 1px solid #3576BC;
+		border-radius: 10px;
+		cursor: pointer;
+		outline: none;
+		text-transform: uppercase;
+	}
+
+/* CSS - DISPOSITIVOS MÓVILES */
 @media only screen and (max-width: 768px) {
 	.menuItems, .progContainer, .progContainer:first-of-type, .dirContainer > div {
 		display: block;
@@ -281,5 +376,10 @@ header {
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%,-20%);
+	}
+	.equipos {
+		display: block;
+		width: 100%;
+		margin-bottom: 25px;
 	}
 }
