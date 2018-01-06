@@ -277,6 +277,7 @@ header {
 	clear: both;
 }
 
+<<<<<<< HEAD
 /* NEWSLETTER */
 .btn-nl {
 	position: fixed;
@@ -345,6 +346,8 @@ header {
 		text-transform: uppercase;
 	}
 
+=======
+>>>>>>> 9afc5473a27683107b45591543a9a9d4fb7be6ad
 /* CSS - DISPOSITIVOS MÓVILES */
 @media only screen and (max-width: 768px) {
 	.menuItems, .progContainer, .progContainer:first-of-type, .dirContainer > div {
