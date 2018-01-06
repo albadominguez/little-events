@@ -19,20 +19,22 @@
 
 		// Verificar el resultado de la query
 		if ($resultado) {
-			/* Si se ha hecho el insert correctamente se redirecciona
-			   a la pagina de inicio */
-			header("Location: index.html");
+			/* Si se ha hecho el insert correctamente se muestra
+			   un mensaje indicando que todo ha ido bien */
+			echo 'OK';
 		} else if (mysqli_errno($conexion) == 1062) {
-			// El usuario ya existee
+			/* El usuario ya existe, se muestra un mensaje indicando
+			   que ya está inscrito */
 			echo 'Duplicado';
 		} else {
 			// Cualquier otro error
-			'Ha ocurrido un error';
+			echo 'Error';
 		}
 	} else {
 		/* Si se esta intentando acceder a este archivo
 		   o no se han enviado los parametros del formulario
 		   se redirecciona al index */
-		header("Location: index.html");
+		//header("Location: index.html");
+		   echo 'asad';
 	}
 ?>

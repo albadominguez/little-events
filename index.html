@@ -206,14 +206,18 @@
 	SUSCRIBETE
 </button>
 
-<div class="nl-cont" id="nl-cont">
-	<form class="nl-form" action="suscripcion.php" method="post">
+<div class="nl-cont" onsubmit="return false" id="nl-cont">
+	<form class="nl-form" method="POST">
 		<h2>Suscribete al newsletter</h2>
 		<input type="text" name="name" placeholder="Nombre y Apellidos" required>
 		<input type="email" name="email" placeholder="Email" required>
-		<button type="submit">Suscribir</button>
-		<button type="button" onclick="showNewsletter('hide')">Cancelar</button>
+		<button type="submit" onclick="verifySubmit()">Suscribir</button>
+		<button type="reset" onclick="showNewsletter('hide')">Cancelar</button>
 	</form>
+</div>
+
+<div id="divMsg" class="divMsg">
+	<p id='msg' class="msg">Esto es un mensaje</p>
 </div>
 
 <!-- __________________ FOOTER __________________ -->
@@ -257,6 +261,35 @@
 
 <!-- __________________ SCRIPTS __________________ -->
 
+<script>
+	function verifySubmit() {
+		var xhr = new XMLHttpRequest();
+		var form = document.forms[0];
+		var pMsg = document.getElementById('msg');
+		var divMsg = document.getElementById('divMsg');
+
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				if (this.responseText == 'OK') {
+					showNewsletter('hide');
+					form.reset();
+					pMsg.innerHTML = 'Gracias por suscribirte. :)';
+					setTimeout(function() {divMsg.style.display = 'inline-block'}, 800);
+					setTimeout(function() {divMsg.style.display = 'none'}, 2000);
+				} else if (this.responseText == 'Duplicado') {
+					pMsg.innerHTML = 'El email utilizado ya ha existe. Utiliza otra dirección de correo.';
+					divMsg.style.display = 'inline-block';
+					setTimeout(function() {divMsg.style.display = 'none'}, 2000);
+				}
+			}
+		}
+		xhr.open('POST', 'suscripcion.php', true);
+		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		xhr.send('name='+form.elements['name'].value+'&email='+form.elements['email'].value);
+
+		return false;
+	}
+</script>
 <script src="js/funciones.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH0J-YqEdHvPi1X_tqmyb1W4hKIrKta6I&callback=miMapa"></script>
 </body>

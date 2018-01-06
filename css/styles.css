@@ -345,6 +345,21 @@ header {
 		text-transform: uppercase;
 	}
 
+/* MENSAJE NEWSLETTER */
+.divMsg {
+	background: #fff;
+	width: 20%;
+	border-radius: 10px;
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+	padding: 50px 20px 50px 20px;
+	box-shadow: 0px 0px 20px 5px;
+}
+
 /* CSS - DISPOSITIVOS MÓVILES */
 @media only screen and (max-width: 768px) {
 	.menuItems, .progContainer, .progContainer:first-of-type, .dirContainer > div {
