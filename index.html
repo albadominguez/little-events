@@ -237,17 +237,17 @@
 					Email
 				</a>
 				
-				<a class="textoContacto" href="https://www.facebook.com">
+				<a class="textoContacto" href="https://www.facebook.com" target="_blank">
 					<img alt="facebook" src="img/facebook.png" width="15">
 					Facebook
 				</a>
 				
-				<a class="textoContacto" href="https://www.instagram.com/wetalkbcn/">
+				<a class="textoContacto" href="https://www.instagram.com/wetalkbcn/" target="_blank">
 					<img alt="instagram" src="img/instagram.png" width="15">
 					Instagram
 				</a>
 			
-				<a class="textoContacto" href="https://twitter.com">
+				<a class="textoContacto" href="https://twitter.com" target="_blank">
 					<img alt="twitter" src="img/twitter.png" width="15">
 					Twitter
 				</a>
@@ -264,31 +264,40 @@
 <!-- __________________ SCRIPTS __________________ -->
 
 <script>
+	/* Ajax - Funcion que envia la información del formulario
+	   y permite recibir la respuesta. De esta manera se puede
+	   mostrar un mensaje al interactuar con el formulario.*/
 	function verifySubmit() {
 		var xhr = new XMLHttpRequest();
 		var form = document.forms[0];
 		var pMsg = document.getElementById('msg');
 		var divMsg = document.getElementById('divMsg');
 
+		// Recibir la respuesta del servidor
 		xhr.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				if (this.responseText == 'OK') {
+					// Todo ha ido bien, se muestra un mensaje de exito.
 					showNewsletter('hide');
 					form.reset();
 					pMsg.innerHTML = 'Gracias por suscribirte. :)';
 					setTimeout(function() {divMsg.style.display = 'inline-block'}, 800);
 					setTimeout(function() {divMsg.style.display = 'none'}, 2000);
 				} else if (this.responseText == 'Duplicado') {
+					// Usuario duplicado, se muestra un mensaje de error.
 					pMsg.innerHTML = 'El email utilizado ya ha existe. Utiliza otra dirección de correo.';
 					divMsg.style.display = 'inline-block';
 					setTimeout(function() {divMsg.style.display = 'none'}, 2000);
 				}
 			}
 		}
+
+		// Enviar la información del formulario usando el metodo POST
 		xhr.open('POST', 'suscripcion.php', true);
 		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 		xhr.send('name='+form.elements['name'].value+'&email='+form.elements['email'].value);
 
+		// La funcion retorna false para evitar la recarga de la página.
 		return false;
 	}
 </script>
