@@ -17,8 +17,8 @@
 			<ul class="menuItems">
 				<li><a id="nav1" href="#-programacion" onclick="scrollSmooth('#programacion')">Programación</a></li>
 				<li><a id="nav2" href="#-sectionCL" onclick="scrollSmooth('#sectionCL')">Cómo llegar</a></li>
-				<li><a id="nav2" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
 				<li><a id="nav3" href="#-sponsors" onclick="scrollSmooth('#sponsors')">Sponsors</a></li>
+				<li><a id="nav2" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -200,6 +200,22 @@
 	</section>
 </main>
 
+<!-- __________________ NEWSLETTER __________________ -->
+
+<button id="btn-nl" class="btn-nl" onclick="showNewsletter('show')">
+	SUSCRIBETE
+</button>
+
+<div class="nl-cont" id="nl-cont">
+	<form class="nl-form" action="suscripcion.php" method="post">
+		<h2>Suscribete al newsletter</h2>
+		<input type="text" name="name" placeholder="Nombre y Apellidos" required>
+		<input type="email" name="email" placeholder="Email" required>
+		<button type="submit">Suscribir</button>
+		<button type="button" onclick="showNewsletter('hide')">Cancelar</button>
+	</form>
+</div>
+
 <!-- __________________ FOOTER __________________ -->
 
 <footer>
@@ -241,30 +257,7 @@
 
 <!-- __________________ SCRIPTS __________________ -->
 
-<script>
-    // Función para generar el mapa
-	function miMapa() {
-		var direccion = new google.maps.LatLng(41.399238, 2.170086);
-		var mapaDiv = document.getElementById("googleMap");
-		var mapaProp = {center: direccion, zoom:15};
-		var mapa = new google.maps.Map(mapaDiv, mapaProp);
-		var marcador = new google.maps.Marker({position: direccion});
-		marcador.setMap(mapa);
-	}
-
-	// Scroll suave en la pantalla
-	function scrollSmooth(id) {
-	 //    window.scroll({
-		// 	top: 300, 
-		// 	left: 0, 
-		// 	behavior: 'smooth' 
-		// });
-		document.querySelector(id).scrollIntoView({
-			 behavior: 'smooth' 
-		});
-	}
-
-</script>
+<script src="js/funciones.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH0J-YqEdHvPi1X_tqmyb1W4hKIrKta6I&callback=miMapa"></script>
 </body>
 </html>
