@@ -17,13 +17,8 @@
 			<ul class="menuItems">
 				<li><a id="nav1" href="#-programacion" onclick="scrollSmooth('#programacion')">Programación</a></li>
 				<li><a id="nav2" href="#-sectionCL" onclick="scrollSmooth('#sectionCL')">Cómo llegar</a></li>
-<<<<<<< HEAD
 				<li><a id="nav3" href="#-sponsors" onclick="scrollSmooth('#sponsors')">Sponsors</a></li>
 				<li><a id="nav2" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
-=======
-				<li><a id="nav2" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
-				<li><a id="nav3" href="#-sponsors" onclick="scrollSmooth('#sponsors')">Sponsors</a></li>
->>>>>>> 9afc5473a27683107b45591543a9a9d4fb7be6ad
 			</ul>
 		</nav>
 	</div>
@@ -262,34 +257,7 @@
 
 <!-- __________________ SCRIPTS __________________ -->
 
-<<<<<<< HEAD
 <script src="js/funciones.js"></script>
-=======
-<script>
-    // Función para generar el mapa
-	function miMapa() {
-		var direccion = new google.maps.LatLng(41.399238, 2.170086);
-		var mapaDiv = document.getElementById("googleMap");
-		var mapaProp = {center: direccion, zoom:15};
-		var mapa = new google.maps.Map(mapaDiv, mapaProp);
-		var marcador = new google.maps.Marker({position: direccion});
-		marcador.setMap(mapa);
-	}
-
-	// Scroll suave en la pantalla
-	function scrollSmooth(id) {
-	 //    window.scroll({
-		// 	top: 300, 
-		// 	left: 0, 
-		// 	behavior: 'smooth' 
-		// });
-		document.querySelector(id).scrollIntoView({
-			 behavior: 'smooth' 
-		});
-	}
-
-</script>
->>>>>>> 9afc5473a27683107b45591543a9a9d4fb7be6ad
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH0J-YqEdHvPi1X_tqmyb1W4hKIrKta6I&callback=miMapa"></script>
 </body>
 </html>
