@@ -215,8 +215,12 @@
 <div class="nl-cont" onsubmit="return false" id="nl-cont">
 	<form class="nl-form" method="POST">
 		<h2>Suscribete al newsletter</h2>
-		<input type="text" name="name" placeholder="Nombre y Apellidos" required>
-		<input type="email" name="email" placeholder="Email" required>
+		<label> Nombre y Apellidos:
+			<input type="text" name="name" placeholder="Ej: Manuel Perez Rivera" required>
+		</label>
+		<label> Email:
+			<input type="email" name="email" placeholder="Ej: mperezr@ejemplo.com" required>
+		</label>
 		<button type="submit" onclick="verifySubmit()">Suscribir</button>
 		<button type="reset" onclick="showNewsletter('hide')">Cancelar</button>
 	</form>
@@ -239,22 +243,22 @@
 				</p>
 				
 				<a class="textoContacto" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@deportesolidario.com" target="_blank">
-					<img alt="email" src="img/mail.png" width="15">
+					<img alt="email" src="img/mail.png" width="15" alt="Enviar email">
 					Email
 				</a>
 				
 				<a class="textoContacto" href="https://www.facebook.com" target="_blank">
-					<img alt="facebook" src="img/facebook.png" width="15">
+					<img alt="facebook" src="img/facebook.png" width="15" alt="Acceso a Facebook">
 					Facebook
 				</a>
 				
 				<a class="textoContacto" href="https://www.instagram.com/wetalkbcn/" target="_blank">
-					<img alt="instagram" src="img/instagram.png" width="15">
+					<img alt="instagram" src="img/instagram.png" width="15" alt="Acceso a Instagram">
 					Instagram
 				</a>
 			
 				<a class="textoContacto" href="https://twitter.com" target="_blank">
-					<img alt="twitter" src="img/twitter.png" width="15">
+					<img alt="twitter" src="img/twitter.png" width="15" alt="Acceso a Twitter">
 					Twitter
 				</a>
 			</div>
