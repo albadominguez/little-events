@@ -281,6 +281,21 @@ header {
 }
 
 /* NEWSLETTER */
+.btn-fx {
+	padding: 15px 30px;
+	color: #fff;
+	font-size: 1.5em;
+	background-color: #ffa500;
+	border: 1px solid #ffa500;
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+}
+	.btn-fx:hover {
+		background-color: #ffb733;
+		border: 1px solid #ffb733;
+	}
+
 .btn-nl {
 	position: fixed;
 	bottom: 40px;
