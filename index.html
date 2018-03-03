@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="48 horas deporte solidario" />
 	<title>Little Events - 48 Horas de deporte solidario</title>
 	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
@@ -12,13 +13,13 @@
 <!-- __________________ CABECERA __________________ -->
 
 <header>
-	<div class="menuContainer">
+	<div id="menuContainer" class="menuContainer">
 		<nav class="menu">
 			<ul class="menuItems">
 				<li><a id="nav1" href="#-programacion" onclick="scrollSmooth('#programacion')">Programación</a></li>
 				<li><a id="nav2" href="#-sectionCL" onclick="scrollSmooth('#sectionCL')">Cómo llegar</a></li>
 				<li><a id="nav3" href="#-sponsors" onclick="scrollSmooth('#sponsors')">Sponsors</a></li>
-				<li><a id="nav2" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
+				<li><a id="nav4" href="#-aboutUs" onclick="scrollSmooth('#aboutUs')">Sobre nosotros</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -164,14 +165,14 @@
 		<div class="divProg">
 			<h2 class="sectionTitle">Sponsors</h2>
 			<div class="divSponsors">
-				<img src="img/sponsors.jpg" alt="Patrocinadores del evento" width="100%">
+				<img src="img/sponsors.jpg" alt="Patrocinadores del evento" width="800">
 			</div>
 		</div>
 	</section>
 
 <!-- __________________ SOBRE NOSOTROS __________________ -->
 
-	<section id="aboutUs" class="sectionWhite" style="background-color: #fff; padding-top: 0">
+	<section id="aboutUs" class="sectionWhite" style="background-color: #fff; padding-top: 0; padding-bottom: 0">
 		<div class="divProg">
 			<h2 class="sectionTitle">Sobre nosotros</h2>
 			<p class="le-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum tincidunt consectetur. Nam eleifend, velit vel malesuada porta, mauris mauris sagittis sem, tincidunt luctus metus velit non nunc. Vivamus id purus lacus. Aliquam non condimentum justo, eu finibus enim. In risus tellus, porta id libero vitae, pharetra ultrices est. Morbi eget mi nibh. Suspendisse rhoncus, nisl in efficitur lacinia, arcu.</p>
@@ -179,25 +180,30 @@
 		</div>
 		<div class="divProg">
 			<div class="equipos">
-				<img src="img/equipo1.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125px">
+				<img src="img/equipo1.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125">
 				<h3>Lorem ipsum</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
 			</div>
 			<div class="equipos">
-				<img src="img/equipo2.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125px">
+				<img src="img/equipo2.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125">
 				<h3>Lorem ipsum</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
 			</div>
 			<div class="equipos">
-				<img src="img/equipo3.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125px">
+				<img src="img/equipo3.jpg" alt="Fotografía integrante equipo Little Event S.L." width="125">
 				<h3>Lorem ipsum</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac ipsum.</p>
 			</div>
 		</div>
 		
-		
-		
+		<div style="height: 30px; text-align: center; position: relative; margin: 30px 0 25px 0;">&nbsp;
+			<div class="arrow" onclick="scrollSmooth('#menuContainer')" style="position:static;border-color: black; bottom: 0; transform: rotate(225deg)"></div>
+		</div>
 	</section>
+
+	<div style="text-align: center; margin: 15px 0 25px 0">
+		<button class="btn-fx" onclick="showNewsletter('show')">SUSCRIBETE AL NEWSLETTER</button>
+	</div>
 </main>
 
 <!-- __________________ NEWSLETTER __________________ -->
@@ -206,14 +212,24 @@
 	SUSCRIBETE
 </button>
 
-<div class="nl-cont" id="nl-cont">
-	<form class="nl-form" action="suscripcion.php" method="post">
+<div class="nl-cont" onsubmit="return false" id="nl-cont">
+	<form class="nl-form" method="POST">
 		<h2>Suscribete al newsletter</h2>
-		<input type="text" name="name" placeholder="Nombre y Apellidos" required>
-		<input type="email" name="email" placeholder="Email" required>
-		<button type="submit">Suscribir</button>
-		<button type="button" onclick="showNewsletter('hide')">Cancelar</button>
+		<label> Nombre y Apellidos:
+			<input type="text" name="name" placeholder="Ej: Manuel Perez Rivera" required>
+		</label>
+		<label> Email:
+			<input type="email" name="email" placeholder="Ej: mperezr@ejemplo.com" required>
+		</label>
+		<button type="submit" onclick="verifySubmit()">Suscribir</button>
+		<button type="reset" onclick="showNewsletter('hide')">Cancelar</button>
 	</form>
+</div>
+
+<!-- __________________ MENSAJES AL INTERACTUAR CON NEWSLETTER __________________ -->
+
+<div id="divMsg" class="divMsg">
+	<p id='msg' class="msg"></p>
 </div>
 
 <!-- __________________ FOOTER __________________ -->
@@ -227,22 +243,22 @@
 				</p>
 				
 				<a class="textoContacto" href="https://mail.google.com/mail/?view=cm&fs=1&to=info@deportesolidario.com" target="_blank">
-					<img alt="email" src="img/mail.png" width="15px">
+					<img alt="email" src="img/mail.png" width="15" alt="Enviar email">
 					Email
 				</a>
 				
-				<a class="textoContacto" href="https://www.facebook.com">
-					<img alt="facebook" src="img/facebook.png" width="15px">
+				<a class="textoContacto" href="https://www.facebook.com" target="_blank">
+					<img alt="facebook" src="img/facebook.png" width="15" alt="Acceso a Facebook">
 					Facebook
 				</a>
 				
-				<a class="textoContacto" href="https://www.instagram.com/wetalkbcn/">
-					<img alt="instagram" src="img/instagram.png" width="15px">
+				<a class="textoContacto" href="https://www.instagram.com/wetalkbcn/" target="_blank">
+					<img alt="instagram" src="img/instagram.png" width="15" alt="Acceso a Instagram">
 					Instagram
 				</a>
 			
-				<a class="textoContacto" href="https://twitter.com">
-					<img alt="twitter" src="img/twitter.png" width="15px">
+				<a class="textoContacto" href="https://twitter.com" target="_blank">
+					<img alt="twitter" src="img/twitter.png" width="15" alt="Acceso a Twitter">
 					Twitter
 				</a>
 			</div>
@@ -257,6 +273,44 @@
 
 <!-- __________________ SCRIPTS __________________ -->
 
+<script>
+	/* Ajax - Funcion que envia la información del formulario
+	   y permite recibir la respuesta. De esta manera se puede
+	   mostrar un mensaje al interactuar con el formulario.*/
+	function verifySubmit() {
+		var xhr = new XMLHttpRequest();
+		var form = document.forms[0];
+		var pMsg = document.getElementById('msg');
+		var divMsg = document.getElementById('divMsg');
+
+		// Recibir la respuesta del servidor
+		xhr.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				if (this.responseText == 'OK') {
+					// Todo ha ido bien, se muestra un mensaje de exito.
+					showNewsletter('hide');
+					form.reset();
+					pMsg.innerHTML = 'Gracias por suscribirte. :)';
+					setTimeout(function() {divMsg.style.display = 'inline-block'}, 800);
+					setTimeout(function() {divMsg.style.display = 'none'}, 2000);
+				} else if (this.responseText == 'Duplicado') {
+					// Usuario duplicado, se muestra un mensaje de error.
+					pMsg.innerHTML = 'El email utilizado ya ha existe. Utiliza otra dirección de correo.';
+					divMsg.style.display = 'inline-block';
+					setTimeout(function() {divMsg.style.display = 'none'}, 2000);
+				}
+			}
+		}
+
+		// Enviar la información del formulario usando el metodo POST
+		xhr.open('POST', 'suscripcion.php', true);
+		xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		xhr.send('name='+form.elements['name'].value+'&email='+form.elements['email'].value);
+
+		// La funcion retorna false para evitar la recarga de la página.
+		return false;
+	}
+</script>
 <script src="js/funciones.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAH0J-YqEdHvPi1X_tqmyb1W4hKIrKta6I&callback=miMapa"></script>
 </body>
